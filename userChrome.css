@@ -1,0 +1,148 @@
+#tabbrowser-tabs {
+    --user-tab-rounding: 0px;
+}
+
+.tab-background {
+    border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
+    margin-block: 1px 0 !important;
+}
+#scrollbutton-up, #scrollbutton-down {
+    border-top-width: 1px !important;
+    border-bottom-width: 0 !important;
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
+}
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+}
+
+[brighttext="true"] .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20))) !important;
+}
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    border-radius: 0 !important;
+}
+
+.tabbrowser-tab {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#TabsToolbar {
+    --user-mute-button-height: 20px;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) {
+    width: var(--user-mute-button-height) !important;
+    height: var(--user-mute-button-height) !important;
+    margin-left: calc(var(--user-mute-button-height) / 2 + 2px) !important;
+    margin-right: 2px !important;
+    padding: 0 !important;
+}
+
+.tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay) {
+    margin-left: -4px !important;
+    margin-top: calc((var(--user-mute-button-height) - 16px) / 2) !important;
+}
+
+.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]),
+
+.tabbrowser-tab:hover .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay),
+
+:root[uidensity="compact"] .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay) {
+    opacity: 1 !important;
+}
+
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]):hover {
+    fill: green !important;
+}
+[lwthemetextcolor="bright"] .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]):hover {
+    fill: lightgreen !important;
+}
+
+.tabbrowser-tab {
+    font-weight: 400 !important;
+}
+
+menupopup:not(.in-menulist) > menuitem,
+menupopup:not(.in-menulist) > menu {
+  padding-block: 4px !important;
+  min-height: unset !important;
+}
+:root {
+  --arrowpanel-menuitem-padding: 4px 8px !important;
+}
+
+@layer tokens-foundation {
+  :root,
+  :host(.anonymous-content-host) {
+
+	--border-radius-xsmall: 0px !important;
+    --border-radius-small: 0px !important;
+    --border-radius-medium: 0px !important;
+    --border-radius-large: 0px !important;
+  }
+}
+
+.tab-background,
+#urlbar-background,
+#searchbar,
+menupopup,
+.menupopup-arrowscrollbox{ border-radius: 0 !important; }
+:root{--arrowpanel-border-radius:0px !important;}
+
+#alltabs-button { display: none !important; }
+
+toolbaritem,
+toolbaritem *,
+toolbarbutton,
+toolbarbutton * {
+    --urlbar-border-radius: 0px !important;
+    --toolbarbutton-border-radius: 0px !important;
+    border-radius: 0 !important;
+}
+
+panel,
+panel::part(content),
+panelmultiview,
+panelview,
+panelview *,
+.panel-viewcontainer,
+.panel-viewstack {
+    --arrowpanel-border-radius: 0px !important;
+    --panel-border-radius: 0px !important;
+    border-radius: 0 !important;
+}
+
+button,
+input,
+textarea,
+select,
+menulist,
+search-textbox,
+moz-button,
+moz-button::part(button),
+moz-input-search,
+moz-input-text {
+    --button-border-radius: 0px !important;
+    --input-border-radius: 0px !important;
+    border-radius: 0 !important;
+}
+
+#nav-bar {
+    --user-navbar-height: 46px;
+    height: var(--user-navbar-height) !important;
+    min-height: var(--user-navbar-height) !important;
+    align-items: center !important;
+}
+
+.tabbrowser-tab:not([hidden], [selected]):not(.tabbrowser-tab:not([hidden]) ~ .tabbrowser-tab) .tab-background {
+    border-left-color: var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+}
+
+.tabbrowser-tab[selected] .tab-background {
+    border-bottom-width: 0 !important;
+}

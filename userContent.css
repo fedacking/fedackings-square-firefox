@@ -1,0 +1,20 @@
+@-moz-document url-prefix("about:logins") {
+    :root,
+    :host {
+        --border-radius-xsmall: 0px !important;
+        --border-radius-small: 0px !important;
+        --border-radius-medium: 0px !important;
+        --border-radius-large: 0px !important;
+        --button-border-radius: 0px !important;
+        --input-border-radius: 0px !important;
+    }
+
+    button,
+    input,
+    textarea,
+    select,
+    moz-button,
+    moz-button::part(button) {
+        border-radius: 0 !important;
+    }
+}
